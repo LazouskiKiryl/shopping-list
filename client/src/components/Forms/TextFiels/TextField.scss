@@ -1,0 +1,31 @@
+@import '../../../styles/main';
+@import '../../../styles/variables';
+
+$invalid-border-color: #e9a5a5;
+$invalid-background-color: #ffebe9;
+
+$hint-color: #cf222e;
+
+.text-field {
+  &__input {
+    @extend %text-input;
+    width: 100%;
+    border: 1px solid #d0d7de;
+    box-shadow: none;
+
+    &::placeholder {
+      color: $dark-text-color;
+    }
+
+    &_invalid {
+      border-color: $invalid-border-color;
+      background-color: $invalid-background-color;
+    }
+  }
+
+  &__hint {
+    margin: 0.2rem 0 0 0;
+    color: $hint-color;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,73 @@
+@import '../../../styles/variables.scss';
+
+$background-color: transparent;
+$active-background-color: $section-border-color;
+$hover-background-color: #00000009;
+
+.list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  padding: 6px;
+  background-color: $background-color;
+
+  &:hover {
+    background-color: $hover-background-color;
+
+    .list-item__buttons {
+      visibility: visible;
+    }
+  }
+
+  &_active {
+    background-color: $active-background-color;
+
+    &:hover {
+      background-color: $active-background-color;
+    }
+  }
+
+  &_edit {
+    background-color: $background-color;
+
+    &:hover {
+      background-color: $background-color;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+  }
+
+  &__title {
+    width: 100%;
+    padding: 4px 6px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    background-color: inherit;
+    color: $dark-text-color;
+    font-size: 0.9rem;
+    font-weight: 600;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-decoration: none;
+
+    .list-item_edit & {
+      outline: 1px dashed #7e7262;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 2px;
+    border-radius: 4px;
+    visibility: hidden;
+
+    .list-item_edit & {
+      visibility: visible;
+    }
+  }
+}

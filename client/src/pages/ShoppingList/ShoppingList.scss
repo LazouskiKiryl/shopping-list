@@ -1,0 +1,17 @@
+$navigation-width: 240px;
+$padding: 12px;
+
+.shopping-list {
+  display: flex;
+  flex: 1 0 100%;
+
+  &__navigation {
+    flex: 1 0 $navigation-width;
+    padding: $padding 0 0 $padding;
+  }
+
+  &__content {
+    flex: 1 0 calc(100% - #{$navigation-width});
+    padding: $padding;
+  }
+}

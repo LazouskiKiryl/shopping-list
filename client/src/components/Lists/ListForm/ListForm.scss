@@ -1,0 +1,31 @@
+@import '../../../styles//main';
+
+.list-form {
+  padding: 12px;
+
+  &__title {
+    @extend %text-input;
+    width: 100%;
+    margin-bottom: 8px;
+
+    &_hidden {
+      height: 0;
+      width: 0;
+      padding: 0;
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+
+    &:focus {
+      outline: 1px dashed #777777;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 8px;
+  }
+}

@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+%section {
+  padding: $section-padding;
+  border: 1px solid $section-border-color;
+  border-radius: $section-border-radius;
+  background-color: $section-background-color;
+}
+
+%text-input {
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  color: $dark-text-color;
+  font-size: 0.9rem;
+}
+
+@mixin verticalGap($gap) {
+  & > *:not(:last-child) {
+    margin-bottom: $gap;
+  }
+}

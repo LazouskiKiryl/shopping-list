@@ -1,0 +1,48 @@
+@import '../../styles/main';
+@import '../../styles//variables';
+
+.purchase-list {
+  @include verticalGap(12px);
+
+  &__section {
+    @extend %section;
+    @include verticalGap(8px);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 4px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    &_done {
+      font-size: 1rem;
+    }
+  }
+
+  &__count {
+    padding: 0 8px;
+    border-radius: 4px;
+    background-color: #1b1f2414;
+    font-size: 0.9rem;
+  }
+
+  &__list {
+    @include verticalGap(8px);
+  }
+
+  &__message {
+    margin: 0;
+    padding: 4px 0 10px 0;
+    color: rgb(128, 128, 128);
+    text-align: center;
+  }
+}

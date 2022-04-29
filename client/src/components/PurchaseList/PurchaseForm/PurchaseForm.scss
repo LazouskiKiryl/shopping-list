@@ -1,0 +1,49 @@
+@import '../../../styles/variables';
+@import '../../../styles//main';
+
+$title-width: 74%;
+$count-width: 100% - $title-width;
+$column-gap: 8px;
+
+.purchase-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__inputs {
+    display: flex;
+    column-gap: $column-gap;
+    width: 100%;
+    margin-bottom: 8px;
+
+    &_hidden {
+      height: 0;
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+  }
+
+  &__title,
+  &__count {
+    @extend %text-input;
+
+    &:focus {
+      outline: 1px dashed #777777;
+    }
+  }
+
+  &__title {
+    flex: 1 0 calc($title-width - $column-gap);
+    max-width: $title-width;
+  }
+
+  &__count {
+    flex: 1 0 $count-width;
+    max-width: $count-width;
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 8px;
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.lists {
+  border: 1px solid $section-border-color;
+  border-radius: 4px;
+  background-color: $section-background-color;
+  overflow: hidden;
+
+  &__message {
+    margin: 16px 12px 4px 12px;
+    font-size: 0.9rem;
+  }
+}

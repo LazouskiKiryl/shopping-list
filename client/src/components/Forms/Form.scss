@@ -1,0 +1,30 @@
+@import '../../styles/main';
+@import '../../styles/variables';
+
+$error-text-color: #f50000;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+  width: 300px;
+  padding: 1.6rem;
+  border: 1px solid $section-border-color;
+  border-radius: 4px;
+  background-color: $section-background-color;
+
+  &__error {
+    margin: 0;
+    color: $error-text-color;
+  }
+
+  &__link {
+    align-self: flex-start;
+    color: $brown-600;
+    font-size: 0.9rem;
+
+    &:active {
+      color: $brown-900;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import '../../../styles/variables.scss';
+
+.purchase-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 #091e4240;
+  background-color: #ffffff;
+  color: $dark-text-color;
+  font-size: 0.9rem;
+  font-weight: 400;
+
+  &:hover {
+    background-color: #f4f5f7;
+
+    & .purchase-item__buttons {
+      opacity: 1;
+    }
+  }
+
+  &_active {
+    &:hover {
+      background-color: #ffffff;
+    }
+  }
+
+  &__checkbox {
+    margin: 9px 0 8px 8px;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    align-self: center;
+    column-gap: 8px;
+    padding: 4px;
+
+    .purchase-item_active & {
+      padding-left: 25px;
+    }
+  }
+
+  &__title,
+  &__count {
+    width: 0;
+    padding: 2px 6px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background-color: inherit;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    .purchase-item_active & {
+      outline: 1px dashed #d6d6d6;
+    }
+  }
+
+  &__title {
+    flex: 1 0 calc(80% - 18px);
+    max-width: 80%;
+  }
+
+  &__count {
+    flex: 1 0 20%;
+    max-width: 20%;
+  }
+
+  &__buttons {
+    display: flex;
+    margin: 4px;
+    opacity: 0;
+
+    &_visible {
+      opacity: 1;
+    }
+  }
+}

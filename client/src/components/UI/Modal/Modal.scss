@@ -1,0 +1,31 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+
+  &_open {
+    display: block;
+  }
+
+  &__content {
+    position: relative;
+    width: 480px;
+    min-height: 1em;
+    margin: 20px auto;
+    border: 1px solid #ffa600;
+    background-color: #fff;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 1em;
+    cursor: pointer;
+  }
+}

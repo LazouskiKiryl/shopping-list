@@ -1,0 +1,41 @@
+@import '../../../styles//variables.scss';
+
+.button {
+  padding: 4px 10px 6px;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &_primary {
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: $dark-primary-color;
+    }
+
+    &:disabled {
+      background-color: #889aad;
+    }
+  }
+
+  &_secondary {
+    border: 1px solid $section-border-color;
+    background-color: #ffffff;
+    color: $dark-text-color;
+
+    &:hover {
+      background-color: #f3f4f5;
+    }
+  }
+
+  &_transparent {
+    background-color: transparent;
+
+    &:hover {
+      outline: 1px solid #ffffff;
+    }
+  }
+}
