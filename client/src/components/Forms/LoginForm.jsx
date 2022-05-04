@@ -11,8 +11,8 @@ import TextField from './TextFiels/TextField';
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [username, setUsername] = useState({ value: 'lllll', isValid: true });
-  const [password, setPassword] = useState({ value: 'lllll', isValid: true });
+  const [username, setUsername] = useState({ value: '', isValid: true });
+  const [password, setPassword] = useState({ value: '', isValid: true });
   const dispatch = useDispatch();
 
   const handleSubmit = async (event) => {
@@ -68,9 +68,6 @@ const LoginForm = () => {
       <Button onClick={handleSubmit} disabled={loading}>
         {submitButtonTitle}
       </Button>
-      {/* <Button onClick={handleSubmit} disabled={false}>
-        Войти
-      </Button> */}
       <Link className="form__link" to="/signup">
         Зарегистрироваться
       </Link>
